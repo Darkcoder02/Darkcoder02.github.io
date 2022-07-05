@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 
 *{
     font-size: 16px;
@@ -24,9 +25,9 @@ body::-webkit-scrollbar-thumb {
 
 .navbar{
     position: fixed;
-    background-color: #00041a;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-    transition: width 200ms ease;
+    background-color: #3b3b3b;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    transition: width 100ms ease;
 }
 
 .navbar-nav{
@@ -40,6 +41,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-item{
     width: 100%;
+    border-bottom: 2px solid transparent;
 }
 
 .nav-link{
@@ -53,11 +55,16 @@ body::-webkit-scrollbar-thumb {
 .link-text{
     display: none;
     margin-left: 1rem;
+    color:rgb(235, 235, 235);
+    font-family: 'Titan One', cursive;
 }
 
-.nav-link svg{
-    min-width: 2rem;
-    margin: 0 1.5rem;
+.logo-text{
+    display: none;
+    margin-left: 0.7rem;
+    font-size: 1.5rem;
+    color:rgb(139, 224, 245);
+    font-family: 'Titan One', cursive;
 }
 
 .logo{
@@ -65,8 +72,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
-    color: rgb(195, 96, 60);
-    background:gray;
+    background:rgba(255, 255, 255, 0.264) ;
     font-size:2rem;
     text-transform: uppercase;
     letter-spacing:0.5ch;
@@ -84,10 +90,18 @@ body::-webkit-scrollbar-thumb {
 
 /* small screen */
 @media only screen and (max-width:600px){
+
     .navbar{
         bottom: 0;
         width: 100vw;
-        height:5rem;
+        height:3.5rem;
+        overflow: hidden;
+    }
+
+    .nav-link svg{
+        max-width: 1.6rem;
+        max-height: 1.6rem;
+        margin-bottom: 0.9rem;
     }
 
     .logo{
@@ -153,13 +167,10 @@ body::-webkit-scrollbar-thumb {
     }
 
     .connect-text{
+        font-family: 'Titan One', open sans;
         text-align: center;
         font-size:3.4rem;
-        background: rgb(63,94,251);
-        background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-        background-clip:text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color:white;
     }
 
     .left img{
@@ -213,12 +224,19 @@ body::-webkit-scrollbar-thumb {
     }
 
     .navbar:hover{
-        width:12rem;
+        width:13rem;
     }
 
     .navbar:hover .link-text{
         display: inline;
-        transition: opacity var(--transition-speed);
+    }
+
+    .navbar:hover .logo-text{
+        display: inline;
+    }
+
+    .navbar .link-text:hover{
+        color:#48AAAD;
     }
 
     .main{
@@ -306,15 +324,17 @@ body::-webkit-scrollbar-thumb {
 
 
     .connect-text{
+        font-family: 'Titan One', cursive; 
         text-align: center;
-        font-size:5rem;
-        background: rgb(63,94,251);
-        background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-        background-clip:text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size:3.4rem;
+        color:white;
     }
 
+    .nav-link svg{
+        min-width: 2rem;
+        margin: 0 1.5rem;
+    }
+    
 }
 
 /* Laptop screen */
@@ -327,7 +347,7 @@ body::-webkit-scrollbar-thumb {
         height:26rem;
         width:26rem;
         border-radius:1rem;
-    }
+    }   
 }
 
 .main::-webkit-scrollbar {
@@ -364,7 +384,6 @@ body::-webkit-scrollbar-thumb {
 .landing h1 span.branch:hover{
     color:rgb(0, 213, 255);
 }
-
 
 /* ABOUT PAGE */
 .about{
@@ -465,17 +484,12 @@ body::-webkit-scrollbar-thumb {
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23656565' fill-opacity='0.4'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.connect-title{
-    color:rgb(231, 215, 215);
-    margin: 2rem;
-}
-
 form{
     max-width: 550px;
     width: 90%;
-    background-color: #00151b;
+    background-color: #1b1d24;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");  
-    padding:0.5rem;
+    padding:1.5rem;
     border-radius:1rem;
     box-sizing: border-box;
 }
@@ -515,23 +529,21 @@ input[type="submit"]{
     margin-bottom:1rem;
     width:80%;
     max-width:15rem;
-    background: rgb(63,94,251);
-    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-    color:rgb(247, 239, 225);
+    background-color:rgba(255, 255, 255, 0.649);
+    color:rgb(64, 64, 64);
     font-size:1.2rem;
     border-radius:1rem;
 }
 
 input[type="submit"]:hover{
-    background: rgb(63,94,251);
-    background: linear-gradient(266deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background:rgba(0, 0, 0, 0.649);
+    color:#ffffff;
 }
 
 .social{
     display:flex;
     align-items: flex-end;
 }
-
 
 i{
     width:2rem;
@@ -541,7 +553,7 @@ i{
 }
 
 .fa-cog-github {
-    color: rgb(114, 31, 153);
+    color: white;
 }
 
 .fa-cog-linkedin {

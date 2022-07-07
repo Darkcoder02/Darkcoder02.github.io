@@ -61,9 +61,9 @@ body::-webkit-scrollbar-thumb {
 
 .logo-text{
     display: none;
-    margin-left: 0.7rem;
+    margin-left: 0.5rem;
     font-size: 1.5rem;
-    color:rgb(139, 224, 245);
+    color:rgb(255, 255, 255);
     font-family: 'Titan One', cursive;
 }
 

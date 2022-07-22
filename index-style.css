@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0.5rem;
     font-size: 1.5rem;
     color:rgb(255, 255, 255);
-    font-family: 'Titan One', cursive;
+    font-family:  open sans;
 }
 
 .logo{
@@ -75,8 +75,12 @@ body::-webkit-scrollbar-thumb {
     background:rgba(255, 255, 255, 0.264) ;
     font-size:2rem;
     text-transform: uppercase;
-    letter-spacing:0.5ch;
+    letter-spacing:0.3ch;
     width: 100%;
+}
+
+.logo :hover{
+    color:black;
 }
 
 .logo svg{

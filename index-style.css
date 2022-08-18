@@ -572,3 +572,7 @@ i{
 .fa-cog-linkedin {
     color: #0e76a8;
 }
+
+a{
+    text-decoration: none;
+}

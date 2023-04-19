@@ -139,6 +139,11 @@ body::-webkit-scrollbar-thumb {
         font-size: 2rem;
         color:rgba(255, 255, 255, 0.5);
     }
+
+    .generalS{
+        font-size: 3rem;
+        color:rgba(255, 111, 0, 0.5);
+    }
     
     .college{
         font-size: 3rem;
